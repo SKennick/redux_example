@@ -14,9 +14,7 @@ export function reducer(state: Todo[] = [initialTodo], action: TodoActions.Actio
       return [...state, action.payload];
     case TodoActions.REMOVE_TODO:
       const index = state.indexOf(action.payload, 0);
-      console.log(index);
       state.splice(index, 1);
-      console.log(state);
       return state;
     default:
       return state;
